@@ -2,7 +2,7 @@
 I do not take any responsibility from people using this script, this script is made to be used only for legal reasons,
 and in case someone uses it to break any law, its their full responsibility.
 This script is made for users to efficiently and legaly submit their data in case they want to bomb their own phone number and or email account,
-this script is not made for any ilegal uses, and the user is might be required to change the code to make it stand under any policies(google for an example)
+this script is not made for any ilegal uses, and the user might be required to change the code to make it stand under any policies(google for an example)
 
 # Usage
 To use this script, you will need to provide a search string, Phone Number, name, email address and optionaly a message.

@@ -47,10 +47,10 @@ AmountOfWebsitesToSendFormsTo = 3 #number of websites is this value x12, note th
 FormNameValue = 'Nice Guy' #Target first + last name 
 
 #enter form number
-FormPhoneNumberValue = '05969696969' #Target phone number
+FormPhoneNumberValue = '6666666666' #Target phone number
 
 #enter form email # you can use corob21626@gmail.com as a sample
-FormEmailValue = 'corob21626@gmail.com' #Target Email
+FormEmailValue = 'Example@gmail.com' #Target Email
 
 #Optional, enter comment. usually not mandatory by most websites, but entering something may increase the submitted forms amount
 FormCommentValue = '' # example : Hello, please call me and send me emails!

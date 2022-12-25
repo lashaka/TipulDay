@@ -1,6 +1,7 @@
 import collect_websites
 import constants as const
 import submit_forms
+
 try:
     import requests
     from bs4 import BeautifulSoup
@@ -8,6 +9,7 @@ except ImportError:
     import_y_n = input(const.PLEASE_INSTALL_PIP_TEXT)
     if import_y_n.lower() == const.PLEASE_INSTALL_PIP_YES_TEXT:
         import os
+
         os.system(const.PIP_INSTALL_TEXT[0])
         os.system(const.PIP_INSTALL_TEXT[1])
     else:
@@ -32,13 +34,13 @@ class main(object):
         self.SuccessfullForms = 0
         self.FailedForms = 0
 
-    def main(self: object) -> None:
+    def main(
+        self: object
+    ) -> None:
         """
         This is a main method in the main class.
-
         Args:
             self: The object.
-
         Returns:
             None.
         """
@@ -58,11 +60,12 @@ class main(object):
             formphone=self.FORM_PHONE,
             formcomment=self.FORM_COMMENT,
             websites=websites,
-            url=self.url).main()
-    def collect_specific_websites(self) -> None:
+            url=self.url,
+        ).main()
+
+    def collect_specific_websites(self: object) -> None:
         """
         This function collects the websites from the file and appends them to the websites list.
-
         :param self: The object.
         :param websites: The list of websites.
         :return: None
@@ -75,8 +78,16 @@ class main(object):
             print(const.COULD_NOT_ADD_THE_WEBSITE_TEXT)
             exit()
 
-    def get_all_constants(self) -> list:
-        alldata = __import__(const.LIBRARIES_TEXT[1]).user_settings_util().get_all_data()
+    def get_all_constants(self: object) -> list:
+        """
+        Get all constants from the file.
+
+        :param self: The object.
+        :return: The list of all constants.
+        """
+        alldata = (
+            __import__(const.LIBRARIES_TEXT[1]).user_settings_util().get_all_data()
+        )
         print(alldata)
         return alldata
 

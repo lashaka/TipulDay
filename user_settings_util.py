@@ -2,7 +2,15 @@ import constants as const
 
 
 class user_settings_util(object):
-    def clear_command_line(self) -> None:
+    def clear_command_line(self: object) -> None:
+        """Clear the command line.
+
+        Args:
+            self: Main class instance.
+
+        Returns:
+            None.
+        """
         __import__(const.LIBRARIES_TEXT[0]).system(
             const.CLEAR_COMMAND_TEXT[0]
             if __import__(const.LIBRARIES_TEXT[0]).name == const.WINDOWS_OS_NAME_TEXT
@@ -12,17 +20,15 @@ class user_settings_util(object):
     def get_google_search_value(self: object) -> str:
         """
         Get the value of the search string from the user.
-
         :param self: The object.
         :return: The search string.
         """
         SEARCH_STRING = input(const.SEARCH_STRING_INPUT_TEXT)
         return str(SEARCH_STRING)
 
-    def get_amount_of_websites_to_send_forms_to(self) -> int:
+    def get_amount_of_websites_to_send_forms_to(self: object) -> int:
         """
         Get the amount of websites to send forms to.
-
         :param self:
         :param const:
         :return:
@@ -32,10 +38,9 @@ class user_settings_util(object):
         )
         return int(AMOUNT_OF_WEBSITES_TO_SEND_FORMS_TO)
 
-    def get_add_specific_search_website(self) -> bool:
+    def get_add_specific_search_website(self: object) -> bool:
         """
         Ask the user if they want to add a specific search website.
-
         :return: True if the user wants to add a specific search website, False otherwise.
         """
         ADD_SPECIFIC_SEARCH_WEBSITE = input(const.ADD_SPECIFIC_SEARCH_WEBSITE_TEXT)
@@ -53,7 +58,7 @@ class user_settings_util(object):
             print(const.ADD_SPECIFIC_SEARCH_WEBSITE_INVALID_INPUT_TEXT)
             exit()
 
-    def get_form_name(self) -> str:
+    def get_form_name(self: object) -> str:
         """
         Get form name from user
         :param self:
@@ -66,24 +71,36 @@ class user_settings_util(object):
     def get_form_email(self: object) -> str:
         """
         Get form email from user.
-
         :param self: object
         :return: str
         """
         FORM_EMAIL = input(const.FORM_EMAIL_TEXT)
         return str(FORM_EMAIL)
 
-    def get_form_phone(self) -> int:
+    def get_form_phone(self: object) -> int:
+        """
+        Get phone number from user
+        :return: int
+        """
         FORM_PHONE = input(const.FORM_PHONE_TEXT)
         return int(FORM_PHONE)
 
-    def get_form_comment(self) -> str:
+    def get_form_comment(self: object) -> str:
+        """
+        Get comment from user
+        :return: str
+        """
         FORM_COMMENT = input(const.FORM_COMMENT_TEXT)
         if FORM_COMMENT == None:
             FORM_COMMENT = ""
         return str(FORM_COMMENT)
 
-    def get_all_data(self) -> list:
+    def get_all_data(self: object) -> list:
+        """
+        Get all data from the user.
+
+        :return: list
+        """
         SEARCH_STRING = self.get_google_search_value()
         self.clear_command_line()
         AMOUNT_OF_WEBSITES_TO_SEND_FORMS_TO = (
